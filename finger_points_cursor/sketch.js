@@ -1,34 +1,36 @@
+let hand;
+function preload() {
+  hand = loadImage('assets/images/hand.svg');
+}
+
 function setup() {
-    createCanvas(windowWidth, windowHeight);
-  }
+  createCanvas(windowWidth, windowHeight);
+  angleMode(DEGREES);
+}
+
+function draw() {
+  background(130);
   
-  function draw() {
-    background(123);
-  
-    let rows = 10;
-    let cols = 10;
-    let cellWidth = width / cols;
-    let cellHeight = height / rows;
-  
-    for (let y = 0; y < rows; y++) {
-      for (let x = 0; x < cols; x++) {
-        let posX = x * cellWidth + cellWidth / 2;
-        let posY = y * cellHeight + cellHeight / 2;
-  
-        let angle = atan2(mouseY - posY, mouseX - posX);
-        
-        push(); // Save the current drawing state
-        translate(posX, posY);
-        rotate(angle); // Rotate the arrow towards the cursor
-        
-        // Draw arrow shape
-        line(0, 0, cellWidth * 0.4, 0);
-        line(cellWidth * 0.4, 0, cellWidth * 0.3, -cellHeight * 0.1);
-        line(cellWidth * 0.4, 0, cellWidth * 0.3, cellHeight * 0.1);
-        
-        pop(); // Restore the previous drawing state
-      }
+  let rows = 5;
+  let cols = 5;
+  let cellWidth = width / cols;
+  let cellHeight = height / rows;
+
+  for (let y = 0; y < rows; y++) {
+    for (let x = 0; x < cols; x++) {
+      let posX = x * cellWidth + cellWidth / 2;
+      let posY = y * cellHeight + cellHeight / 2;
+
+      let angle = atan2(mouseY - posY, mouseX - posX);
+
+      push(); // Save the current drawing state
+      translate(posX, posY);
+      rotate(angle-27); // Rotate the image towards the cursor
+      scale(0.2,0.2)
+      // Draw the custom image instead of arrow shapes
+      image(hand, 0, 0);
+      
+      pop(); // Restore the previous drawing state
     }
   }
-  
-  
+}
