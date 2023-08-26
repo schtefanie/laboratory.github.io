@@ -7,9 +7,12 @@ function setup() {
   createCanvas(windowWidth, windowHeight);
   angleMode(DEGREES);
 }
+function windowResized() {
+    resizeCanvas(windowWidth, windowHeight);
+  }
 
 function draw() {
-  background(130);
+  background(123,155,123);
   
   let rows = 5;
   let cols = 5;
