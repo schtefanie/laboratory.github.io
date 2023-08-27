@@ -1,4 +1,6 @@
 let xOff = 0.0;
+let yOff = 10;
+let amp = 300;
 
 function setup() {
     createCanvas(windowWidth, windowHeight);
@@ -11,10 +13,13 @@ function windowResized() {
 function draw() {
     background(252, 236, 173);
 
-let a = 10;
+//let a = 10;
     xOff = xOff + 0.03;
-    let x = mouseX + noise(xOff) * width * sin(a);
-    let y = mouseY + noise(xOff) * height * sin(a);
+    yOff = yOff + 0.03;
+    let newX=map(noise(xOff), 0, 1, -amp, amp);
+    let newY=map(noise(yOff), 0, 1, -amp, amp);
+    let x = mouseX + newX;
+    let y = mouseY + newY;
 
 
 
