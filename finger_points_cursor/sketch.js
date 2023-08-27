@@ -12,7 +12,7 @@ function windowResized() {
   }
 
 function draw() {
-  background(123,155,123);
+  background(252,236,173);
   
   let rows = 5;
   let cols = 5;
@@ -29,7 +29,7 @@ function draw() {
       push(); // Save the current drawing state
       translate(posX, posY);
       rotate(angle-27); // Rotate the image towards the cursor
-      scale(0.2,0.2)
+      scale(0.6,0.6)
       // Draw the custom image instead of arrow shapes
       image(hand, 0, 0);
       
