@@ -1,6 +1,10 @@
 let xOff = 0.0;
 let yOff = 10;
 let amp = 300;
+let fliege;
+function preload() {
+  fliege = loadImage('assets/images/fliege.svg');
+}
 
 function setup() {
     createCanvas(windowWidth, windowHeight);
@@ -14,8 +18,8 @@ function draw() {
     background(252, 236, 173);
 
 //let a = 10;
-    xOff = xOff + 0.03;
-    yOff = yOff + 0.03;
+    xOff = xOff + 0.02;
+    yOff = yOff + 0.02;
     let newX=map(noise(xOff), 0, 1, -amp, amp);
     let newY=map(noise(yOff), 0, 1, -amp, amp);
     let x = mouseX + newX;
@@ -23,7 +27,14 @@ function draw() {
 
 
 
-    circle(x, y, 250);
+
+   // circle(x, y, 250);
+   translate(x, y);
+   rotate(map(noise(xOff)));
+   scale(0.09,0.09);
+image(fliege, 0, 0);
+
+
 
 }
 
