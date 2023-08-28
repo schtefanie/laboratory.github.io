@@ -1,12 +1,17 @@
 let hand;
+let guilty;
 function preload() {
   hand = loadImage('assets/images/hand.svg');
+  guilty = loadImage('assets/images/guilty.svg')
+  customCursor = loadImage('assets/images/guilty.svg');
 }
 
 function setup() {
   createCanvas(windowWidth, windowHeight);
   angleMode(DEGREES);
+  noCursor();
 }
+
 function windowResized() {
     resizeCanvas(windowWidth, windowHeight);
   }
@@ -14,6 +19,10 @@ function windowResized() {
 function draw() {
   background(1,42,54);
   
+  push();
+  image(customCursor, mouseX, mouseY, 150,100); 
+  pop();
+
   let rows = 5;
   let cols = 5;
   let cellWidth = width / cols;

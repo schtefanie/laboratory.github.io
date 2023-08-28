@@ -10,6 +10,7 @@ function setup() {
     createCanvas(windowWidth, windowHeight);
     blendMode(DIFFERENCE);
     background(1, 42, 54);
+    noCursor();
 
     button = createButton('color Change');
     button.position(0, 0);
@@ -19,7 +20,7 @@ function setup() {
 function changeBG() {
     let val = random(255);
     background(val);
-  }
+}
 
 function draw() {
 
@@ -28,8 +29,6 @@ function draw() {
     // scale(0.3);
     // image(figur, windowWidth/2, windowHeight/2);
     // pop();
-
-    
 
 
     if (blendActive) {

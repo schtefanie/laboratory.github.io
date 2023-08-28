@@ -5,6 +5,7 @@ let fliege;
 let body;
 let fenster;
 let viereck;
+
 function preload() {
     fliege = loadImage('assets/images/fliege.svg');
     fenster = loadImage('assets/images/fenster.svg');
@@ -17,6 +18,7 @@ function setup() {
     noStroke();
     fill(10, 140, 140);
     angleMode(DEGREES);
+    noCursor();
 }
 
 function windowResized() {
