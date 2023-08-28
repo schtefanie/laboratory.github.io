@@ -15,6 +15,8 @@ function preload() {
 
 function setup() {
     createCanvas(windowWidth, windowHeight);
+    noStroke();
+    fill(10, 140, 140);
     angleMode(DEGREES);
 }
 
