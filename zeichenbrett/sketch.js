@@ -52,5 +52,3 @@ function mousePressed() {
 function mouseReleased() {
     blendActive = false;
 }
-
-
