@@ -29,7 +29,7 @@ function draw() {
     if (blendActive) {
         blendMode(DIFFERENCE);
         fill(255, 123, 123);
-        ellipse(mouseX, mouseY, 80, 80);
+        ellipse(mouseX, mouseY, 50, 50);
         blendMode(DIFFERENCE);
     } else {
         ;
