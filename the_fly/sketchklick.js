@@ -12,7 +12,6 @@ function preload() {
 }
 
 
-
 function setup() {
     createCanvas(windowWidth, windowHeight);
     noStroke();
@@ -20,24 +19,24 @@ function setup() {
     angleMode(DEGREES);
 }
 
-
 function windowResized() {
     resizeCanvas(windowWidth, windowHeight);
 }
 
 
 
+
 function draw() {
-    background(252, 236, 173);
+    background(250, 150, 123);
 
     push();
-    scale(0.5);
-    image(viereck, 770, 275);
+    scale(2.2);
+    image(viereck, 160, 60);
     pop();
 
 
     push();
-    scale(0.5);
+    scale(0.55);
     image(fenster, 300, 50);
     pop();
 

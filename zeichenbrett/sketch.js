@@ -1,4 +1,5 @@
 let blendActive = false;
+let button;
 
 let figur;
 function preload() {
@@ -8,8 +9,17 @@ function preload() {
 function setup() {
     createCanvas(windowWidth, windowHeight);
     blendMode(DIFFERENCE);
-    background(250, 150, 123);
+    background(1, 42, 54);
+
+    button = createButton('color Change');
+    button.position(0, 0);
+    button.mousePressed(changeBG);
 }
+
+function changeBG() {
+    let val = random(255);
+    background(val);
+  }
 
 function draw() {
 
@@ -19,23 +29,21 @@ function draw() {
     // image(figur, windowWidth/2, windowHeight/2);
     // pop();
 
-
-
-    // rect(100,100,200);
-    // rect(500,500,200);
-    // rect(800,200,200);
+    
 
 
     if (blendActive) {
-        blendMode(DIFFERENCE);
-        fill(255, 123, 123);
+        blendMode(BLEND);
+        fill(250, 150, 123);
         ellipse(mouseX, mouseY, 50, 50);
         blendMode(DIFFERENCE);
     } else {
         ;
     }
 
-
+    //rect(100,100,200);
+    // rect(500,500,200);
+    // rect(800,200,200);
 }
 
 function mousePressed() {

@@ -12,7 +12,7 @@ function windowResized() {
   }
 
 function draw() {
-  background(252,236,173);
+  background(1,42,54);
   
   let rows = 5;
   let cols = 5;
