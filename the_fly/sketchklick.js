@@ -8,7 +8,7 @@ let viereck;
 
 function preload() {
     fliege = loadImage('assets/images/fliege.svg');
-    fenster = loadImage('assets/images/fenster.svg');
+    fenster = loadImage('assets/images/Fenster.svg');
     viereck = loadImage('assets/images/viereck.svg');
 }
 
